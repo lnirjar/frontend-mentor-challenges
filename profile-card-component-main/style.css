@@ -7,7 +7,9 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
+
 
 .container {
     min-height: 100vh;
@@ -15,27 +17,43 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: 
-    url('./images/bg-pattern-top.svg'),
-    url('./images/bg-pattern-bottom.svg'),
-    hsl(185, 75%, 39%);
-    background-position: 
-    top -400px left -200px,
-    bottom -400px right -200px;
+    background-color: hsl(185, 75%, 39%);
+    z-index: -2;
+}
 
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background: url('./images/bg-pattern-top.svg');
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top -30vw right 50vw;
+    z-index: -1;
+}
 
-    background-size: 60%;
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    background: url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom -25vw left 55vw;
+    z-index: -1;
 }
 
 .card {
     max-width: 350px;
     width: 90%;
-    min-height: 50vh;
     border-radius: 5%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
     background-color: white;
 }
 
@@ -48,7 +66,6 @@ body {
 .card__body {
     text-align: center;
     margin-top: -50px;
-    flex-grow: 1;
 }
 
 .card__body__pic {
@@ -108,28 +125,4 @@ footer {
 
 .attribution a:hover {
     text-decoration: underline;
-}
-
-@media screen and (max-width: 900px) {
-    .container {
-        background-size: 80%;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .container {
-        background-size: 70%;
-        background-position: 
-        top -200px left -100px,
-        bottom -200px right -100px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .container {
-        background-size: 90%;
-        background-position: 
-        top -200px left -100px,
-        bottom -200px right -100px;
-    }
 }
