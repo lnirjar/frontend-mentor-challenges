@@ -10,7 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .container {
     min-height: 100vh;
     display: flex;
@@ -18,35 +17,15 @@ body {
     justify-content: center;
     position: relative;
     background-color: hsl(185, 75%, 39%);
-    z-index: -2;
-}
-
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-    background: url('./images/bg-pattern-top.svg');
+    background: 
+    url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg'),
+    hsl(185, 75%, 39%);
+    background-position: 
+    top -30vw right 50vw,
+    bottom -25vw left 55vw;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top -30vw right 50vw;
-    z-index: -1;
-}
-
-.container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100vw;
-    background: url('./images/bg-pattern-bottom.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom -25vw left 55vw;
-    z-index: -1;
 }
 
 .card {
