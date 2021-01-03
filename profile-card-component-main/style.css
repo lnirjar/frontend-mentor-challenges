@@ -16,7 +16,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: hsl(185, 75%, 39%);
     background: 
     url('./images/bg-pattern-top.svg'),
     url('./images/bg-pattern-bottom.svg'),
