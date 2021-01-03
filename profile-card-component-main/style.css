@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: 
+    url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg'),
+    hsl(185, 75%, 39%);
+    background-position: 
+    top -400px left -200px,
+    bottom -400px right -200px;
+
+    background-repeat: no-repeat;
+
+    background-size: 60%;
+}
+
+.card {
+    max-width: 350px;
+    width: 90%;
+    min-height: 50vh;
+    border-radius: 5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.card__banner {
+    height: 150px;
+    background: url('./images/bg-pattern-card.svg');
+    background-size: contain;
+}
+
+.card__body {
+    text-align: center;
+    margin-top: -50px;
+    flex-grow: 1;
+}
+
+.card__body__pic {
+    border-radius: 50%;
+    border: 5px solid white;
+    /* display: block; */
+}
+
+.card__body__name, .card__stats > div > .card__stats__count {
+    font-size: 18px;
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+}
+
+.card__body__name > span, .card__body__location, .card__stats > div > .card__stats__info {
+    color: hsl(227, 10%, 46%);
+}
+
+.card__stats {
+    display: flex;
+    border-top: 1px solid hsl(0, 0%, 59%);;
+    height: 100px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card__stats > div > p {
+    margin: 5px;
+}
+
+.card__stats__info {
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+.card__stats > div {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attribution {
+    text-align: center;
+    line-height: 20px;
+  }
+
+.attribution a {
+    color: black;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        background-size: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        background-size: 70%;
+        background-position: 
+        top -200px left -100px,
+        bottom -200px right -100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        background-size: 90%;
+        background-position: 
+        top -200px left -100px,
+        bottom -200px right -100px;
+    }
+}
