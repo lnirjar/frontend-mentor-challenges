@@ -1,40 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js"></script>
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+  <main class="container">
+    <article class="card">
+      <section class="card__illustration-container">
+        <div class="woman-illustration">
+          <img src="./images/illustration-woman-online-desktop.svg" alt=" ">
+        </div>
+        <div class="box-illustration">
+          <img src="./images/illustration-box-desktop.svg" alt=" ">
+        </div>
+      </section>
+      <section class="faq">
+        <h2 class="faq__heading">FAQ</h2>
+        <ul class="faq__list">
+          <li class="faq__list__item">
+            <h3 class="faq-question">
+              How many team members can I invite?
+            </h3>
+            <div class="faq-answer">
+              <p>
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.
+              </p>
+            </div>
+          </li>
+          <li class="faq__list__item">
+            <h3 class="faq-question">
+              What is the maximum file upload size?
+            </h3>
+            <div class="faq-answer">
+              <p>
+                No more than 2GB. All files in your account must fit your allotted storage space.
+              </p>
+            </div>
+          </li>
+          <li class="faq__list__item">
+            <h3 class="faq-question">
+              How do I reset my password?
+            </h3>
+            <div class="faq-answer">
+              <p>
+                Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.
+              </p>
+            </div>
+          </li>
+          <li class="faq__list__item">
+            <h3 class="faq-question">
+              Can I cancel my subscription?
+            </h3>
+            <div class="faq-answer">
+              <p>
+                Yes! Send us a message and we’ll process your request no questions asked.
+              </p>
+            </div>
+          </li>
+          <li class="faq__list__item">
+            <h3 class="faq-question">
+              Do you provide additional support?
+            </h3>
+            <div class="faq-answer">
+              <p>
+                Chat and email support is available 24/7. Phone lines are open during normal business hours.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br />
+      Coded by <a href="https://nirjar.com/" target="_blank">Nirjar Lohakare</a>. <br />
+      <a href="https://github.com/lnirjar/frontendmentor-challenges" target="_blank">Link to the Github repository</a>.
+    </div>
+  </footer>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
+
 </html>
