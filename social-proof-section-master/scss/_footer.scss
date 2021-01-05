@@ -1,0 +1,21 @@
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $very-dark-magenta;
+    background-color: $light-grayish-magenta;
+    .attribution {
+        text-align: center;
+        line-height: 20px;
+      }
+    
+    .attribution a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .attribution a:hover {
+        text-decoration: underline;
+    }
+}

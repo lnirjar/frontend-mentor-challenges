@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: $font-size;
+}
+
+body {
+    font-family: $font-family;
+    background: 
+        url('../images/bg-pattern-top-desktop.svg'),
+        url('../images/bg-pattern-bottom-desktop.svg'),
+        $white;
+
+    background-repeat: no-repeat;
+    background-position: top left, bottom 100px right;
+
+    @media (max-width: 950px) {
+        background: 
+        url('../images/bg-pattern-top-mobile.svg'),
+        url('../images/bg-pattern-bottom-mobile.svg'),
+        $white;
+
+        background-repeat: no-repeat;
+        background-position: top left, bottom 100px right;
+    }
+}

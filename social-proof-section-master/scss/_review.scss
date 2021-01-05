@@ -1,0 +1,61 @@
+.review {
+    background-color: $very-dark-magenta;
+    color: $white;
+    padding: 4% 2%;
+    border-radius: 5%;
+
+    &:nth-of-type(2) {
+        margin-top: 2.5rem;
+    }
+
+    &:nth-of-type(3) {
+        margin-top: 4rem;
+    }
+
+    @media (max-width: 870px) {
+        &:nth-of-type(2) {
+            margin-top: 1rem;
+        }
+    
+        &:nth-of-type(3) {
+            margin-top: 1rem;
+        }
+    }
+
+    .reviewer-info {
+        display: flex;
+        align-items: center;
+        // border: 1px solid $white;
+        margin-bottom: 10%;
+
+        &__image {
+            border-radius: 50%;
+            display: block;
+            width: 3rem;
+        }
+
+        div {
+            // border: 1px solid $white;
+            flex: 1;
+            margin-left: 10%;
+            margin-top: 1%;
+        }
+
+        &__reviewer-name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        &__verified-buyer {
+            font-size: 0.9rem;
+            margin-top: 1%;
+            font-weight: 400;
+            color: $soft-pink;
+        }
+    }
+
+    &__content {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        color: $light-grayish-magenta;
+    }
+}

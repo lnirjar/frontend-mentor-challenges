@@ -1,0 +1,19 @@
+.social-proof-section {
+    &__info {
+        h2 {
+            color: $very-dark-magenta;
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+        p {
+            color: $dark-grayish-magenta;
+            margin-top: 1rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        @media (max-width: 1085px) {
+            text-align: center;
+        }
+    }
+}

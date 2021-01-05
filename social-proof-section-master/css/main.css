@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg"), white;
+  background-repeat: no-repeat;
+  background-position: top left, bottom 100px right;
+}
+
+@media (max-width: 950px) {
+  body {
+    background: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg"), white;
+    background-repeat: no-repeat;
+    background-position: top left, bottom 100px right;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.social-proof-section__info-ratings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1283px) {
+  .social-proof-section__info-ratings-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 550px) {
+  .social-proof-section__info-ratings-container {
+    display: block;
+  }
+}
+
+.social-proof-section__info {
+  max-width: 450px;
+  width: 100%;
+  margin: 1rem;
+}
+
+@media (max-width: 550px) {
+  .social-proof-section__info {
+    margin: 1rem auto;
+  }
+}
+
+.social-proof-section__ratings-section {
+  max-width: 650px;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 450px;
+          flex: 1 1 450px;
+  margin: 1rem;
+}
+
+@media (max-width: 550px) {
+  .social-proof-section__ratings-section {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin: 1rem auto;
+  }
+}
+
+.social-proof-section__reviews-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1283px) {
+  .social-proof-section__reviews-section {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.social-proof-section__reviews-section .review {
+  width: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1rem;
+}
+
+.social-proof-section__info h2 {
+  color: #502050;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.social-proof-section__info p {
+  color: #937b92;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 1085px) {
+  .social-proof-section__info {
+    text-align: center;
+  }
+}
+
+.social-proof-section__ratings-section ul {
+  list-style-type: none;
+}
+
+.social-proof-section__ratings-section li {
+  width: 450px;
+  max-width: 100%;
+}
+
+.social-proof-section__ratings-section li:nth-of-type(2) {
+  margin-left: 10%;
+}
+
+.social-proof-section__ratings-section li:nth-of-type(3) {
+  margin-left: 20%;
+}
+
+@media (max-width: 1215px) {
+  .social-proof-section__ratings-section li:nth-of-type(2) {
+    margin-left: 5%;
+  }
+  .social-proof-section__ratings-section li:nth-of-type(3) {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 1143px) {
+  .social-proof-section__ratings-section li:nth-of-type(2) {
+    margin-left: 2%;
+  }
+  .social-proof-section__ratings-section li:nth-of-type(3) {
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 1111px) {
+  .social-proof-section__ratings-section li:nth-of-type(2) {
+    margin-left: auto;
+  }
+  .social-proof-section__ratings-section li:nth-of-type(3) {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1111px) {
+  .social-proof-section__ratings-section li {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.social-proof-section__ratings-section li article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: #f7f2f7;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 550px) {
+  .social-proof-section__ratings-section li article {
+    display: block;
+    text-align: center;
+  }
+}
+
+.social-proof-section__ratings-section li article .rated-in {
+  margin-left: 1rem;
+  color: #502050;
+  font-size: 1rem;
+}
+
+@media (max-width: 550px) {
+  .social-proof-section__ratings-section li article .rated-in {
+    margin-left: auto;
+  }
+}
+
+.social-proof-section__ratings-section li article .stars-container img {
+  margin-right: 0.3rem;
+}
+
+.review {
+  background-color: #502050;
+  color: white;
+  padding: 4% 2%;
+  border-radius: 5%;
+}
+
+.review:nth-of-type(2) {
+  margin-top: 2.5rem;
+}
+
+.review:nth-of-type(3) {
+  margin-top: 4rem;
+}
+
+@media (max-width: 870px) {
+  .review:nth-of-type(2) {
+    margin-top: 1rem;
+  }
+  .review:nth-of-type(3) {
+    margin-top: 1rem;
+  }
+}
+
+.review .reviewer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10%;
+}
+
+.review .reviewer-info__image {
+  border-radius: 50%;
+  display: block;
+  width: 3rem;
+}
+
+.review .reviewer-info div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+.review .reviewer-info__reviewer-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.review .reviewer-info__verified-buyer {
+  font-size: 0.9rem;
+  margin-top: 1%;
+  font-weight: 400;
+  color: #ee68a4;
+}
+
+.review__content {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: #f7f2f7;
+}
+
+footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #502050;
+  background-color: #f7f2f7;
+}
+
+footer .attribution {
+  text-align: center;
+  line-height: 20px;
+}
+
+footer .attribution a {
+  color: black;
+  text-decoration: none;
+}
+
+footer .attribution a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
