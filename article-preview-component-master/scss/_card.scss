@@ -1,0 +1,199 @@
+.card {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+
+    @media (max-width: 719px) {
+        overflow: hidden;
+    }
+
+    @media (max-width: 560px) {
+        display: block;
+        max-width: 400px;
+    }
+    background-color: white;
+    border-radius: 1em;
+    // overflow: hidden;
+    position: relative;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06);
+
+    &__image-container {
+        width: 40%;
+        overflow: hidden;
+        // outline: 1px solid green;
+        border-radius: 1em 0em 0em 1em;
+
+        background: url('../images/drawers.jpg');
+        background-size: cover;
+
+        @media (max-width: 560px) {
+            height: 10em;
+            width: 100%;
+            border-radius: 1em 1em 0em 0em;
+            background-position: center center;
+        }
+    }
+
+    &__info {
+        width: 60%;
+        padding: 1.5em 1.5em 1em 1.5em;
+
+        @media (max-width: 560px) {
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        @media (max-width: 719px) {
+            
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        &__profile-photo {
+            width: 4em;
+            border-radius: 50%;
+        }
+
+        &__name-date {
+            flex: 1;
+            padding: 0 1em;
+        }
+
+        &__date {
+            font-weight: 400;
+        }
+
+        &__share-button {
+            width: 2.4em;
+            height: 2.4em;
+            // padding: 0.5em;
+            border-radius: 50%;
+            border: none;
+            background-color: $Light-Grayish-Blue;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            transition: margin-top 0.3s ease;
+            z-index: 1;
+            
+            svg {
+                fill: #6E8098;
+                transition: fill 0.3s ease;
+            }
+        }
+
+        &__share-button:hover {
+            background-color: $Desaturated-Dark-Blue;
+            svg {
+                fill: white;
+            }
+        }
+
+        &__share-button--open {
+            background-color: $Very-Dark-Grayish-Blue;
+        
+            svg {
+                fill: white;
+            }
+            
+            @media (max-width: 719px) {
+                background-color: $Desaturated-Dark-Blue;
+                margin-top: 1em;
+            }
+            
+        }
+
+        &__share-button:focus {
+            outline: none;
+        }
+
+        
+
+        .share-options {
+            // display: none;
+            position: absolute;
+            bottom: 6em;
+            right: -2.5em;
+            width: 150px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.7em 1em;
+            border-radius: 0.5em;
+            background-color: $Very-Dark-Grayish-Blue;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06);
+
+            @media (max-width: 719px) {
+                width: 60%;
+                right: 0;
+                height: 5em;
+                bottom: 0em;
+                border-radius: 0;
+                padding-right: 20%;
+                outline: none;
+                transition: transform 0.3s ease;
+            }
+
+            @media (max-width: 560px) {
+                width: 100%;
+            }
+            
+            h5 {
+                text-transform: uppercase;
+                font-size: 0.8em;
+                letter-spacing: 0.3em;
+            }
+
+            a {
+                width: 1.1em;
+                height: 1.2em;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 1em;
+                height: 1em;
+                background-color: $Very-Dark-Grayish-Blue;
+                transform: rotateZ(45deg);
+                position: absolute;
+                bottom: -0.4em;
+                left: 50%;
+                box-shadow:
+                    0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
+
+                @media (max-width: 719px) {
+                    display: none;
+                }
+                
+            }
+
+            &--hidden {
+                display: none;
+
+                @media (max-width: 719px) {
+                    display: flex;
+                    transform: translateY(100%);
+                }                
+            }
+        }
+    }
+}
