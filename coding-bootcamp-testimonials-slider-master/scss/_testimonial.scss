@@ -1,0 +1,133 @@
+.testimonial {
+    width: 100%;
+    display: none;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    background: 
+    url('../images/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom 60% right 5%;
+    background-size: 45%;
+    animation: fadein 2s;
+
+    @media (max-width: 760px) {
+        flex-direction: column;
+        text-align: center;
+        background-position: top 2em center;
+        background-size: 320px;
+    }
+
+    @media (max-width: 450px) {
+        padding: 3em 0;
+    }
+
+    &--current {
+        display: flex;
+    }
+
+    &__text-container {
+        width: 64%;
+        z-index: 1;
+        position: relative;
+
+        @media (max-width: 1015px) {
+            p {
+                font-size: 0.7em;
+            }
+        }
+
+        @media (max-width: 850px) {
+            p {
+                font-size: 0.6em;
+            }
+        }
+
+        @media (max-width: 760px) {
+            width: 400px;
+            // width: 90%;
+            margin-top: 2em;
+            height: 232px;
+        }
+
+        @media (max-width: 450px) {
+            min-width: 320px;
+            width: 90%;
+        }
+
+        @media (max-width: 340px) {
+            min-width: 90%;
+            width: 90%;
+        }
+
+        &::before {
+            content: url('../images/pattern-quotes.svg');
+            position: absolute;
+            top: -2em;
+            left: 15%;
+
+            @media (max-width: 760px) {
+                top: -1.5em;
+                left: 50%;
+                transform: scale(0.4) translateX(-100%);
+            }
+        }
+    }
+
+    &__image-container {
+        width: 40%;
+        margin-left: -2em;
+        @media (max-width: 760px) {
+        width: 245px;
+        margin-left: 0;
+        }
+        box-shadow:
+            5px 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            5px 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            5px 12.5px 10px rgba(0, 0, 0, 0.06),
+            5px 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            5px 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            5px 100px 80px rgba(0, 0, 0, 0.12)
+            ;
+        img {
+            display: block;
+            max-width: 100%;
+            // position: relative;
+        }
+    }
+
+    &__author-container {
+        display: flex;
+        margin-top: 1em;
+        @media (max-width: 915px) {
+            display: block;
+            margin-top: 0.5em;
+        }
+    }
+
+    &__author-name, &__author-job-title {
+        font-size: 0.7em;
+        @media (max-width: 1015px) {
+            font-size: 0.6em;
+        }
+    }
+
+    &__author-name {
+        font-weight: $fw-bold;
+    }
+
+    &__author-job-title {
+        font-weight: $fw-light;
+        margin-left: 0.4em;
+        @media (max-width: 915px) {
+            margin-left: 0;
+        }
+        color: lightgrey;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

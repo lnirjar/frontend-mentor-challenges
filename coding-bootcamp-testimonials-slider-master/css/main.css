@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 32px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #202046;
+  background: url("../images/pattern-curve.svg");
+  background-position: bottom 100px left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media (max-width: 760px) {
+  body {
+    background-position: bottom 40px left -30px;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.testimonial-container {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonial-container__button-container {
+  background-color: white;
+  width: 3em;
+  height: 1.25em;
+  position: absolute;
+  -webkit-transform: translate(25%, -50%);
+          transform: translate(25%, -50%);
+  border-radius: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 760px) {
+  .testimonial-container__button-container {
+    -webkit-transform: translate(75%, -50%);
+            transform: translate(75%, -50%);
+  }
+}
+
+.testimonial-container__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.testimonial-container__button:focus {
+  outline-style: none;
+}
+
+.testimonial {
+  width: 100%;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3em;
+  background: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 60% right 5%;
+  background-size: 45%;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+
+@media (max-width: 760px) {
+  .testimonial {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    background-position: top 2em center;
+    background-size: 320px;
+  }
+}
+
+@media (max-width: 450px) {
+  .testimonial {
+    padding: 3em 0;
+  }
+}
+
+.testimonial--current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonial__text-container {
+  width: 64%;
+  z-index: 1;
+  position: relative;
+}
+
+@media (max-width: 1015px) {
+  .testimonial__text-container p {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 850px) {
+  .testimonial__text-container p {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 760px) {
+  .testimonial__text-container {
+    width: 400px;
+    margin-top: 2em;
+    height: 232px;
+  }
+}
+
+@media (max-width: 450px) {
+  .testimonial__text-container {
+    min-width: 320px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 340px) {
+  .testimonial__text-container {
+    min-width: 90%;
+    width: 90%;
+  }
+}
+
+.testimonial__text-container::before {
+  content: url("../images/pattern-quotes.svg");
+  position: absolute;
+  top: -2em;
+  left: 15%;
+}
+
+@media (max-width: 760px) {
+  .testimonial__text-container::before {
+    top: -1.5em;
+    left: 50%;
+    -webkit-transform: scale(0.4) translateX(-100%);
+            transform: scale(0.4) translateX(-100%);
+  }
+}
+
+.testimonial__image-container {
+  width: 40%;
+  margin-left: -2em;
+  -webkit-box-shadow: 5px 2.8px 2.2px rgba(0, 0, 0, 0.034), 5px 6.7px 5.3px rgba(0, 0, 0, 0.048), 5px 12.5px 10px rgba(0, 0, 0, 0.06), 5px 22.3px 17.9px rgba(0, 0, 0, 0.072), 5px 41.8px 33.4px rgba(0, 0, 0, 0.086), 5px 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 5px 2.8px 2.2px rgba(0, 0, 0, 0.034), 5px 6.7px 5.3px rgba(0, 0, 0, 0.048), 5px 12.5px 10px rgba(0, 0, 0, 0.06), 5px 22.3px 17.9px rgba(0, 0, 0, 0.072), 5px 41.8px 33.4px rgba(0, 0, 0, 0.086), 5px 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 760px) {
+  .testimonial__image-container {
+    width: 245px;
+    margin-left: 0;
+  }
+}
+
+.testimonial__image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+.testimonial__author-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+}
+
+@media (max-width: 915px) {
+  .testimonial__author-container {
+    display: block;
+    margin-top: 0.5em;
+  }
+}
+
+.testimonial__author-name, .testimonial__author-job-title {
+  font-size: 0.7em;
+}
+
+@media (max-width: 1015px) {
+  .testimonial__author-name, .testimonial__author-job-title {
+    font-size: 0.6em;
+  }
+}
+
+.testimonial__author-name {
+  font-weight: 700;
+}
+
+.testimonial__author-job-title {
+  font-weight: 300;
+  margin-left: 0.4em;
+  color: lightgrey;
+}
+
+@media (max-width: 915px) {
+  .testimonial__author-job-title {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #e1e2e4;
+  background-color: #202046;
+}
+
+footer .attribution {
+  text-align: center;
+  line-height: 1.25em;
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+footer .attribution a {
+  color: #e1e2e4;
+  text-decoration: none;
+}
+
+footer .attribution a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */

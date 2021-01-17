@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <section class="testimonial-container">
+    <h2 class="sr-only">Testimonials</h2>
+    <article class="testimonial testimonial--current testimonial--current-flex testimonial--current-visible">
+      <h3 class="sr-only">Testimonial by UX Engineer Tanya Sinclair</h3>
+      <div class="testimonial__image-container">
+        <img src="./images/image-tanya.jpg" alt="Tanya Sinclair" class="profile-photo">
+      </div>
+      <div class="testimonial__text-container">
+        <p class="testimonial__content">
+          “ I’ve been interested in coding for a while but never taken the jump, until now.
+          I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+          excited about the future. ”
+        </p>
+        <div class="testimonial__author-container">
+          <h4 class="testimonial__author-name">Tanya Sinclair</h4>
+          <h5 class="testimonial__author-job-title">UX Engineer</h5>
+        </div>
+      </div>
+    </article>
 
-  “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
+    <article class="testimonial">
+      <h3 class="sr-only">Testimonial by Junior Front-end Developer John Tarkpor</h3>
+      <div class="testimonial__image-container">
+        <img src="./images/image-john.jpg" alt="John Tarkpor" class="profile-photo">
+      </div>
+      <div class="testimonial__text-container">
+        <p class="testimonial__content">
+          “ If you want to lay the best foundation possible I’d recommend taking this course.
+          The depth the instructors go into is incredible. I now feel so confident about
+          starting up as a professional developer. ”
+        </p>
+        <div class="testimonial__author-container">
+          <h4 class="testimonial__author-name">John Tarkpor</h4>
+          <h5 class="testimonial__author-job-title">Junior Front-end Developer</h5>
+        </div>
+      </div>
+    </article>
+    <div class="testimonial-container__button-container">
+      <button class="testimonial-container__button testimonial-container__button--left">
+        <span class="sr-only">left</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18">
+          <path fill="none" stroke="#8585AC" stroke-width="3" d="M11 1L3 9l8 8" />
+        </svg>
+      </button>
+      <button class="testimonial-container__button testimonial-container__button--right">
+        <span class="sr-only">right</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18">
+          <path fill="none" stroke="#8585AC" stroke-width="3" d="M2 1l8 8-8 8" />
+        </svg>
+      </button>
+    </div>
+  </section>
 
-  Tanya Sinclair
-  UX Engineer
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br />
+      Coded by <a href="https://nirjar.com/" target="_blank">Nirjar Lohakare</a>. <br />
+      <a href="https://github.com/lnirjar/frontendmentor-challenges" target="_blank">Link to the Github repository</a>.
+    </div>
+  </footer>
 
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="./js/slider.js" defer></script>
 </body>
+
 </html>

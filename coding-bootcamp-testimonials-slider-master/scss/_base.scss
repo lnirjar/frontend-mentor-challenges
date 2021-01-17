@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: $fs-body;
+}
+
+body {
+    font-family: $ff-body;
+    font-weight: $fw-medium;
+    color: $Dark-Blue;
+
+    background: url('../images/pattern-curve.svg');
+    background-position: bottom 100px left;
+    @media (max-width: 760px) {
+        background-position: bottom 40px left -30px;
+    }
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
