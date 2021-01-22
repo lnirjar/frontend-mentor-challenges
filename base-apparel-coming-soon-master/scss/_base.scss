@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // outline: 1px solid green;
+}
+
+:root {
+    font-size: $fs-body;
+}
+
+body {
+    font-family: $ff-body;
+    background: 
+            url('../images/bg-pattern-desktop.svg'),
+            linear-gradient($grad-1);
+    background-blend-mode: darken;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}

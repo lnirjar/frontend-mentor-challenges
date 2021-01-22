@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div class="container">
+    <main id="main">
+      <section class="hero">
+        <div class="hero__text-container">
+          <header class="header">
+            <img src="./images/logo.svg" alt="Base Apparel logo">
+          </header>
+          <h1>
+            <span>We're</span><br>coming<br>soon
+          </h1>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+          <form action="#" method="post">
+            <label for="email" class="sr-only">Enter Your Email</label>
+            <input name="email" type="text" placeholder="Email Address" required>
+            <label for="email" class="error-message error error--hidden">
+              <span class="sr-only">Message: </span>
+              Please provide a valid email
+            </label>
+            <img class="error-icon error error--hidden" src="./images/icon-error.svg" alt="Error Icon">
+            <button type="submit">
+              <span class="sr-only">submit</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="hero__image-container">
+          <img class="hero__image-container__image-desktop" src="./images/hero-desktop.jpg" alt="Female Model">
+          <img class="hero__image-container__image-mobile" src="./images/hero-mobile.jpg" alt="Female Model">
+        </div>
+      </section>
+    </main>
+  </div>
 
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br />
+      Coded by <a href="https://nirjar.com/" target="_blank">Nirjar Lohakare</a>. <br />
+      <a href="https://github.com/lnirjar/frontendmentor-challenges" target="_blank">Link to the Github repository</a>.
+    </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
