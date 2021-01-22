@@ -17,10 +17,7 @@ html {
 
 body {
     font-family: $ff-body;
-    background: 
-            url('../images/bg-pattern-desktop.svg'),
-            linear-gradient($grad-1);
-    background-blend-mode: darken;
+    background: linear-gradient($grad-1);
 }
 
 .sr-only:not(:focus):not(:active) {
