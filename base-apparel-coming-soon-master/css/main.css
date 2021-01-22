@@ -210,10 +210,6 @@ body {
   outline: none;
 }
 
-.hero__image-container {
-  background: linear-gradient(135deg, white, #fff5f5);
-}
-
 @media (max-width: 1000px) {
   .hero__image-container {
     width: 100%;
