@@ -1,0 +1,127 @@
+.intro-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .container {
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5em 4em;
+
+        @media (max-width: $bp-1) {
+            flex-direction: column;
+            max-width: 700px;
+        }
+
+        @media (max-height: 700px) {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+        @media (max-width: $bp-2) {
+            padding: 5em 1em;
+        }
+    }
+
+    &__text-container {
+        width: 50%;
+        @media (max-width: $bp-1) {
+            width: 100%;
+        }
+
+        p {
+            margin-top: 2em;
+        }
+    }
+
+    &__form-container {
+        width: 45%;
+        // min-width: 500px;
+        @media (max-width: $bp-1) {
+            width: 100%;
+        }
+
+        .offer {
+            margin: 1em auto;
+            margin-top: 0;
+            @media (max-width: $bp-1) {
+                margin-top: 2em;
+            }
+        }
+
+        form {
+            & > input, & > button {
+                margin: 2em auto;
+            }
+
+            & > .error__message {
+                margin-top: -0.9em;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                // outline: 1px solid red;
+            }
+
+            &.error {
+                & > input, & > button {
+                    margin: 1.14em auto;
+                }
+
+                & > button {
+                    margin-bottom: 0.5em;
+                }
+            }
+
+            & > button {
+                margin-bottom: 0.5em;
+            }
+
+            & > p {
+                margin-bottom: 2em;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    & > .success-card {
+        position: fixed;
+        top: 2em;
+        right: 1em;
+        // transform: translate(0, 0);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation: left-to-top 2s ease;
+
+        &--visible {
+            display: flex;
+        }
+    }
+
+    @keyframes left-to-top {
+        0% {
+            opacity: 1;
+            transform: rotateZ(0deg) translate(100%, 0em);
+        }
+
+        25% {
+            opacity: 1;
+            transform: rotateZ(0deg) translate(0, 0);
+        }
+
+        75% {
+            opacity: 1;
+            transform: rotateZ(0deg)translate(0, 0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: rotateZ(0deg) translate(0em, -5em);
+        }
+    }
+}

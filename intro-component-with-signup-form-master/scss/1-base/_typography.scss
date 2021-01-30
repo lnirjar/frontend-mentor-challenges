@@ -1,0 +1,69 @@
+.intro-section {
+
+    &__text-container {
+        
+        @media (max-width: $bp-1) {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            line-height: 1.1em;
+
+            @media (max-width: $bp-3) {
+                font-size: 2em;
+            }
+        }
+    }
+
+    &__form-container {
+
+        .offer {
+            text-align: center;
+            // line-height: 3.5em;
+            font-weight: $fw-sb;
+
+            span {
+                font-weight: $fw-reg;
+            }
+        }
+
+        form {
+
+            & > input, & > button {
+                font-weight: $fw-bold;
+                font-size: 0.95rem;
+            }
+
+            & > .error__message {
+                text-align: right;
+            }
+
+            & > button {
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                word-spacing: 0.1em;
+
+                @media (max-width: $bp-5) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            & > p {
+                text-align: center;
+                font-size: 0.7em;
+
+                a {
+                    text-decoration: none;
+                    font-weight: $fw-sb;
+                }
+            }
+        }
+    }
+
+    & > .success-card {
+        text-align: center;
+        font-weight: $fw-bold;
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,137 @@
+.intro-section {
+    background: url('../../images/bg-intro-desktop.png'), $Red;
+    @media (max-width: $bp-4) {
+        background: url('../../images/bg-intro-mobile.png'), $Red;
+    }
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    // &__text-container {
+    //     p {
+    //         color: $Grayish-Blue;
+    //     }
+    // }
+
+    &__form-container {
+
+        .offer {
+            min-height: 3.5em;
+            padding: 0 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $Blue;
+            border-radius: 0.5em;
+            box-shadow: 0px 7px 1px 1px rgba(0, 0, 0, 0.15);
+            @media (max-width: $bp-1) {
+                padding: 1em;
+            }
+
+            span {
+                color: $Grayish-Blue;
+            }
+        }
+
+        form {
+            background: white;
+            border-radius: 0.7em;
+            padding: 1em 0;
+            box-shadow: 0px 7px 1px 1px rgba(0, 0, 0, 0.15);
+    
+            & > input, & > button {
+                display: block;
+                width: 85%;
+                height: 3.5rem;
+                padding: 0 2rem;
+                border: 0.5px solid $Grayish-Blue;
+                border-radius: 0.5rem;
+                color: $Dark-Blue;
+
+                &:focus {
+                    border: 0.5px solid $Blue;
+                    outline: none;
+                }
+            }
+
+            & > .error__message {
+                display: none;
+                visibility: hidden;
+                color: $Red;
+                font-style: italic;
+                font-size: 0.8rem;
+                width: 85%;
+                padding: 0;
+                position: relative;
+                // outline: 1px solid green;
+                
+                &::before {
+                    content: url('../../images/icon-error.svg');
+                    position: absolute;
+                    top: -3.3em;
+                    right: 1.5em;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    // outline: 1px solid green;
+                }
+            }
+
+            &.error {
+                & > input, & > button {
+                    height: 3.3em;
+                }
+
+                & > input.input--error {
+                    border: 2px solid $Red;
+                    color: $Red;
+                }
+
+                & > .error__message {
+                    display: block;
+
+                    &--visible {
+                        visibility: visible;
+                    }
+                }
+            }
+    
+            button {
+                background: $Green;
+                color: white;
+                border: none;
+                box-shadow: inset 0px -2.5px 1px 1px rgba(0, 0, 0, 0.15);
+                cursor: pointer;
+
+                &:hover, &:focus {
+                    background: lighten($Green, 10%);
+                    border: none;
+                }
+            }
+
+            p {
+                color: $Grayish-Blue;
+                width: 80%;
+
+                a {
+                    color: $Red;
+                }
+            }
+        }
+    }
+
+    & > .success-card {
+        width: 300px;
+        max-width: 90%;
+        height: 100px;
+        background-color: $Dark-Blue;
+        color: white;
+        border-radius: 5px;
+        box-shadow:
+            5px 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            5px 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            5px 12.5px 10px rgba(0, 0, 0, 0.06)
+            ;
+        // border-left: 1em solid $Green;
+    }
+}
