@@ -1,7 +1,7 @@
 .intro-section {
-    background: url('../../images/bg-intro-desktop.png'), $Red;
+    background: url('../images/bg-intro-desktop.png'), $Red;
     @media (max-width: $bp-4) {
-        background: url('../../images/bg-intro-mobile.png'), $Red;
+        background: url('../images/bg-intro-mobile.png'), $Red;
     }
     background-size: cover;
     background-position: center;
@@ -66,7 +66,7 @@
                 // outline: 1px solid green;
                 
                 &::before {
-                    content: url('../../images/icon-error.svg');
+                    content: url('../images/icon-error.svg');
                     position: absolute;
                     top: -3.3em;
                     right: 1.5em;
