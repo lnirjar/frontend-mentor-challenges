@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | Single Price Grid Component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  Join our community
+  <h1 class="sr-only">Single Price Grid Component Challenge</h1>
+  <section class="pricing-section">
+    <h2 class="sr-only">Pricing Section</h2>
+    <article class="pricing-section__pricing">
+      <h2 class="sr-only">Pricing</h2>
+      <section class="pricing-section__pricing__pitch">
+        <h3>Join our community</h3>
+        <h4>30-day, hassle-free money back guarantee</h4>
+        <p>
+          Gain access to our full library of tutorials along with expert code reviews.
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </section>
 
-  30-day, hassle-free money back guarantee
+      <section class="pricing-section__pricing__subscription">
+        <h4>Monthly Subscription</h4>
+        <h5>&dollar;29 <span>per month</span></h5>
+        <p>
+          Full access for less than &dollar;1 a day
+        </p>
+        <a href="#" class="cta">Sign Up</a>
+      </section>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+      <section class="pricing-section__pricing__why">
+        <h4>Why Us</h4>
+        <ul>
+          <li>Tutorials by industry experts</li>
+          <li>Peer &amp; expert code review</li>
+          <li>Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flashcard decks</li>
+          <li>New videos every week</li>
+        </ul>
+      </section>
+    </article>
+  </section>
 
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br />
+      Coded by <a href="https://nirjar.com/" target="_blank">Nirjar Lohakare</a>. <br />
+      <a href="https://github.com/lnirjar/frontendmentor-challenges" target="_blank">Link to the Github repository</a>.
+    </div>
   </footer>
 </body>
+
 </html>

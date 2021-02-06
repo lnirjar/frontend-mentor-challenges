@@ -1,0 +1,68 @@
+.pricing-section {
+    background-color: $Light-Gray;
+    padding: 1rem;
+
+    &__pricing {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06);
+
+        section {
+            padding: 1rem 2rem;
+        }
+
+        &__pitch {
+            background-color: white;
+            
+            h3 {
+                color: $Cyan;
+            }
+
+            h4 {
+                color: $Bright-Yellow;
+            }
+
+            p {
+                color: $Grayish-Blue;
+                max-width: 550px;
+            }
+        }
+
+        &__subscription, &__why {
+            h4, h5 {
+                color: white;
+            }
+
+            p, ul, h5 > span {
+                color: $Light-Gray;
+            }
+        }
+
+        &__subscription {
+            background-color: $Cyan;
+
+            .cta {
+                color: white;
+                background-color: $Bright-Yellow;
+                padding: 1rem 1rem;
+                border-radius: 5px;
+                display: block;
+                width: 100%;
+                box-shadow:
+                    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+            }
+        }
+
+        &__why {
+            background-color: $Light-Cyan;
+
+            ul {
+                list-style-type: none;
+            }
+        }
+    }
+}

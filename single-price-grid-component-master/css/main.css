@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.pricing-section__pricing__pitch h4, .pricing-section__pricing__subscription h4, .pricing-section__pricing__why h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.pricing-section__pricing__subscription p, .pricing-section__pricing__subscription ul, .pricing-section__pricing__subscription h5 > span, .pricing-section__pricing__why p, .pricing-section__pricing__why ul, .pricing-section__pricing__why h5 > span {
+  font-weight: 400;
+}
+
+.pricing-section__pricing__pitch h3 {
+  font-size: 1.5rem;
+}
+
+.pricing-section__pricing__subscription h5 {
+  font-size: 2.5rem;
+}
+
+.pricing-section__pricing__subscription h5 span {
+  font-size: 1rem;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  display: inline-block;
+}
+
+.pricing-section__pricing__subscription .cta {
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pricing-section {
+  background-color: #e5eff5;
+  padding: 1rem;
+}
+
+.pricing-section__pricing {
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
+}
+
+.pricing-section__pricing section {
+  padding: 1rem 2rem;
+}
+
+.pricing-section__pricing__pitch {
+  background-color: white;
+}
+
+.pricing-section__pricing__pitch h3 {
+  color: #2ab2af;
+}
+
+.pricing-section__pricing__pitch h4 {
+  color: #c0df34;
+}
+
+.pricing-section__pricing__pitch p {
+  color: #98a6bd;
+  max-width: 550px;
+}
+
+.pricing-section__pricing__subscription h4, .pricing-section__pricing__subscription h5, .pricing-section__pricing__why h4, .pricing-section__pricing__why h5 {
+  color: white;
+}
+
+.pricing-section__pricing__subscription p, .pricing-section__pricing__subscription ul, .pricing-section__pricing__subscription h5 > span, .pricing-section__pricing__why p, .pricing-section__pricing__why ul, .pricing-section__pricing__why h5 > span {
+  color: #e5eff5;
+}
+
+.pricing-section__pricing__subscription {
+  background-color: #2ab2af;
+}
+
+.pricing-section__pricing__subscription .cta {
+  color: white;
+  background-color: #c0df34;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+}
+
+.pricing-section__pricing__why {
+  background-color: #4bbebc;
+}
+
+.pricing-section__pricing__why ul {
+  list-style-type: none;
+}
+
+footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  background-color: #0d3635;
+}
+
+footer .attribution {
+  text-align: center;
+  line-height: 20px;
+}
+
+footer .attribution a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .attribution a:hover {
+  text-decoration: underline;
+}
+
+.pricing-section {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pricing-section__pricing {
+  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "sales-pitch sales-pitch" "subscription why";
+}
+
+@media (max-width: 655px) {
+  .pricing-section__pricing {
+    display: block;
+    max-width: 400px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.pricing-section__pricing > section > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-section__pricing__pitch {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sales-pitch;
+}
+
+.pricing-section__pricing__subscription {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: subscription;
+}
+
+.pricing-section__pricing__subscription .cta {
+  margin-top: 1.8rem;
+}
+
+.pricing-section__pricing__why {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: why;
+}
+
+.pricing-section__pricing__why ul > li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+/*# sourceMappingURL=main.css.map */

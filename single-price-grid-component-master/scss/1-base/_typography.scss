@@ -1,0 +1,42 @@
+.pricing-section {
+    &__pricing {
+
+        &__pitch, &__subscription, &__why {
+            h4 {
+                font-size: 1.2rem;
+                font-weight: $fw-bold;
+            }
+        }
+
+        &__subscription, &__why {
+            p, ul, h5 > span {
+                font-weight: $fw-reg;
+            }
+        }
+
+        &__pitch {
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__subscription {
+
+            h5 {
+                font-size: 2.5rem;
+
+                span {
+                    font-size: 1rem;
+                    transform: translateY(-30%);
+                    display: inline-block;
+                }
+            }
+
+            .cta {
+                text-align: center;
+                font-weight: $fw-bold;
+                text-decoration: none;
+            }
+        }
+    }
+}

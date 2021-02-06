@@ -1,0 +1,48 @@
+.pricing-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__pricing {
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "sales-pitch sales-pitch"
+            "subscription why";
+
+        @media (max-width: 655px) {
+            display: block;
+            max-width: 400px;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        & > section > * {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &__pitch {
+            grid-area: sales-pitch;
+        }
+
+        &__subscription {
+            grid-area: subscription;
+
+            .cta {
+                margin-top: 1.8rem;
+            }
+        }
+
+        &__why {
+            grid-area: why;
+
+            ul > li {
+                margin-top: 0.3rem;
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
+}
