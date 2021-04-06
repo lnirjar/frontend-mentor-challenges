@@ -1,0 +1,73 @@
+.container {
+    text-align: center;
+}
+
+.main {
+
+    h1 {
+        color: $Gray;
+        font-weight: $fw-light;
+        font-size: 3rem;
+
+        @media (max-width: $bp-1) {
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: $bp-2) {
+            font-size: 1.4rem;
+        }
+
+        strong {
+            font-weight: $fw-bold;
+        }
+    }
+
+    h1 > strong, p {
+        color: $Very-Dark-Blue;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 3rem;
+
+        @media (max-width: $bp-1) {
+            font-size: 1rem;
+        }
+
+        @media (max-width: $bp-2) {
+            font-size: 0.8rem;
+        }
+    }
+
+    .subscription-form {
+
+        p.warning, p.success {
+            font-size: 0.8rem;
+            text-align: left;
+            line-height: 1.5rem;
+            padding-left: 1.5rem;
+            font-style: italic;
+            font-weight: $fw-light;
+        }
+
+        p.warning {
+            color: $Light-Red;
+        }
+
+        p.success {
+            color: green;
+        }
+
+        input, button {
+            font-size: 1rem;
+        }
+        
+        input {
+            color: $Gray;
+        }
+
+        button {
+            color: white;
+        }
+    }
+}

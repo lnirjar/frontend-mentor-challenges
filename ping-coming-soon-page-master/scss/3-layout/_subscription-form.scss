@@ -1,0 +1,14 @@
+.subscription-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto 4rem auto;
+    // outline: 1px solid red;
+
+    // * {
+    // outline: 1px solid red;
+    // }
+
+    @media (max-width: $bp-1) {
+        display: block;
+    }
+}

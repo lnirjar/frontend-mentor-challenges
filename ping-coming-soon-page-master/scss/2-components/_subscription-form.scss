@@ -1,0 +1,55 @@
+.subscription-form {
+
+    width: 95%;
+
+    .input-container {
+        width: 60%;
+    }
+
+    input, button {
+        display: block;
+        padding: 1.5rem;
+        height: 3rem;
+        border-radius: 2rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid $Pale-Blue;
+        &:hover, &:focus {
+            border: 1px solid $Blue;
+        }
+        transition: border 250ms ease;
+    }
+
+    input.warning {
+        border: 1px solid $Light-Red;
+    }
+
+    button {
+        width: 35%;
+        border: 1px solid $Blue;
+        background-color: $Blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 10px 10px 2px $Pale-Blue;
+        &:hover, &:focus {
+            box-shadow: 0px 5px 5px 1px $Pale-Blue;
+            cursor: pointer;
+        }
+        transition: box-shadow 250ms ease;
+    }
+
+    @media (max-width: $bp-1) {
+        .input-container, button {
+            width: 90%;
+            max-width: 500px;
+            margin: 1rem auto;
+        }
+    }
+}

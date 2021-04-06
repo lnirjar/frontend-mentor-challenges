@@ -1,0 +1,19 @@
+// @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300&display=swap');
+
+// 1-BASE
+@import '1-base/variables';
+@import '1-base/base';
+@import '1-base/typography';
+
+// 2-COMPONENTS
+@import '2-components/header';
+@import '2-components/subscription-form';
+@import '2-components/page-footer';
+@import '2-components/footer';
+
+// 3-LAYOUT
+@import '3-layout/layout';
+@import '3-layout/header';
+@import '3-layout/subscription-form';
+@import '3-layout/page-footer';
