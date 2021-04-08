@@ -1,0 +1,29 @@
+//// Colors
+
+// Primary
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+// Neutral
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+$Very-light-gray: hsl(0, 0%, 95%);
+
+// Typography
+// Body Copy
+$fs-body: 15px;
+$ff-body: 'Lexend Deca', sans-serif;
+$fw-body: 400;
+$ff-heading: 'Big Shoulders Display', cursive;
+$fw-heading: 700;
+
+// Footer
+$footer-bg: #293241;
+$footer-text-color: $Very-light-gray;
+
+// card
+$card-border-rad: 0.5rem;
+
+// Break Points
+$bp-1: 1008px;
+$bp-2: 688px;

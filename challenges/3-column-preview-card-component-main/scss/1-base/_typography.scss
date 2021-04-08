@@ -1,0 +1,18 @@
+body {
+    font-family: $ff-body;
+    font-weight: $fw-body;
+}
+
+.preview-section {
+    &__card {
+        h2 {
+            font-family: $ff-heading;
+        }
+
+        .learn-more {
+            text-decoration: none;
+            text-align: center;
+            line-height: 2.7rem;
+        }
+    }
+}

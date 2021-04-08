@@ -1,0 +1,98 @@
+.preview-section__card {
+
+    height: 31rem;
+    width: 20rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $bp-2 + 1) and (max-width: $bp-1) {
+        border-radius: $card-border-rad;
+    }
+
+    img {
+        width: 64px;
+        height: 40px;
+    }
+
+    h2 {
+        color: $Very-light-gray;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        color: $Transparent-white;
+        flex: 1;
+    }
+
+    .learn-more {
+        display: block;
+        width: 10rem;
+        height: 3rem;
+        border: 2px solid $Very-light-gray;
+        border-radius: 3rem;
+        background-color: $Very-light-gray;
+        transition: all 250ms ease;
+    }
+
+    &:nth-of-type(1) {
+        background-color: $Bright-orange;
+
+        @media (min-width: $bp-1) {
+            border-top-left-radius: $card-border-rad;
+            border-bottom-left-radius: $card-border-rad;
+        }
+
+        @media (max-width: $bp-2) {
+            border-top-left-radius: $card-border-rad;
+            border-top-right-radius: $card-border-rad;
+        }
+
+        .learn-more {
+            color: $Bright-orange;
+            &:hover, &:focus {
+                background-color: transparent;
+                color: $Very-light-gray;
+                outline: none;
+            }
+        }
+    }
+
+    &:nth-of-type(2) {
+        background-color: $Dark-cyan;
+
+        .learn-more {
+            color: $Dark-cyan;
+            &:hover, &:focus {
+                background-color: transparent;
+                color: $Very-light-gray;
+                outline: none;
+            }
+        }
+    }
+
+    &:nth-of-type(3) {
+        background-color: $Very-dark-cyan;
+
+        @media (min-width: $bp-1) {
+            border-top-right-radius: $card-border-rad;
+            border-bottom-right-radius: $card-border-rad;
+        }
+
+        @media (max-width: $bp-2) {
+            border-bottom-left-radius: $card-border-rad;
+            border-bottom-right-radius: $card-border-rad;
+        }
+
+        .learn-more {
+            color: $Very-dark-cyan;
+            &:hover, &:focus {
+                background-color: transparent;
+                color: $Very-light-gray;
+                outline: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+// BASE
+@import '1-base/variables';
+@import '1-base/base';
+@import '1-base/typography';
+
+// COMPONENTS
+@import '2-components/card';
+@import '2-components/footer';
+
+// LAYOUT
+@import '3-layout/layout';
