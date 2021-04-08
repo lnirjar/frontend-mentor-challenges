@@ -31,7 +31,8 @@ body {
 
 .preview-section__card h2 {
   font-family: "Big Shoulders Display", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .preview-section__card .learn-more {
