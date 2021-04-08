@@ -1,10 +1,10 @@
 .hero {
-    background: url('../../images/bg-desktop.svg'), $Violet;
+    background: url('../images/bg-desktop.svg'), $Violet;
     background-size: cover;
     background-repeat: no-repeat;
 
     @media (max-width: $bp-2 - 1) {
-        background: url('../../images/bg-mobile.svg'), $Violet;
+        background: url('../images/bg-mobile.svg'), $Violet;
         background-size: contain;
         background-repeat: no-repeat;
     }

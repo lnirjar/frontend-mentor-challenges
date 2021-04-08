@@ -60,14 +60,14 @@ body {
 }
 
 .hero {
-  background: url("../../images/bg-desktop.svg"), #674baf;
+  background: url("../images/bg-desktop.svg"), #674baf;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 579px) {
   .hero {
-    background: url("../../images/bg-mobile.svg"), #674baf;
+    background: url("../images/bg-mobile.svg"), #674baf;
     background-size: contain;
     background-repeat: no-repeat;
   }
