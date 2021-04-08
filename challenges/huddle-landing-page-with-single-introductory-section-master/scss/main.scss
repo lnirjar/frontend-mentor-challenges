@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+// 1-BASE
+@import '1-base/variables';
+@import '1-base/base';
+@import '1-base/typography';
+
+// 2-COMPONENTS
+@import '2-components/hero';
+@import '2-components/social-container';
+@import '2-components/footer';
+
+// 3-LAYOUT
+@import '3-layout/layout';
+@import '3-layout/hero';
+@import '3-layout/social-container';

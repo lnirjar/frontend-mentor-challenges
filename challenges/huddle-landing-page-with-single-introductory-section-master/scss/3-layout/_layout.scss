@@ -1,0 +1,23 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+
+    @media (max-width: $bp-1) {
+        max-width: 720px;
+    }
+
+
+    .social-container {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+
+        @media (max-width: $bp-2 - 1) {
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

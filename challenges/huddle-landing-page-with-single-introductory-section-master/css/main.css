@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.hero .main__text-container h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1190px) {
+  .hero .main__text-container h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .hero .main__text-container h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.hero .main__text-container a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: #674baf;
+}
+
+.hero .main__text-container a:hover {
+  color: white;
+}
+
+.hero {
+  background: url("../../images/bg-desktop.svg"), #674baf;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 579px) {
+  .hero {
+    background: url("../../images/bg-mobile.svg"), #674baf;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero .header .logo {
+  max-width: 50%;
+}
+
+.hero .main__text-container a {
+  display: block;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.hero .main__text-container a:hover, .hero .main__text-container a:focus {
+  background-color: #e882e8;
+  -webkit-box-shadow: 0px 8px 15px rgba(232, 130, 232, 0.2);
+          box-shadow: 0px 8px 15px rgba(232, 130, 232, 0.2);
+  outline: none;
+}
+
+.hero .main__image-container #small-card {
+  -webkit-animation: bob 2s infinite;
+          animation: bob 2s infinite;
+}
+
+.hero .main__image-container #small-card:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes bob {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes bob {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.social-container {
+  width: 10rem;
+}
+
+.social-container > a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: white;
+  -webkit-transition: color 250ms ease;
+  transition: color 250ms ease;
+}
+
+.social-container > a:hover, .social-container > a:focus {
+  color: white;
+  outline: none;
+}
+
+.social-container > a:hover .icon-container, .social-container > a:focus .icon-container {
+  background-color: #e882e8;
+  border: 1px solid #e882e8;
+}
+
+.social-container > a .icon-container {
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-container > a .icon-container svg {
+  height: 1.5rem;
+}
+
+footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #e1e8ee;
+  background-color: #00252e;
+}
+
+footer .attribution {
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.7rem;
+}
+
+footer .attribution a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .attribution a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+@media (max-width: 1190px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.container .social-container {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+@media (max-width: 579px) {
+  .container .social-container {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.hero .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 1190px) {
+  .hero .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 579px) {
+  .hero .main {
+    margin-top: 2rem;
+  }
+}
+
+.hero .main__text-container {
+  max-width: 460px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1190px) and (min-width: 580px) {
+  .hero .main__text-container {
+    margin-top: -6rem;
+    text-align: left;
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 579px) {
+  .hero .main__text-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero .main__text-container p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 579px) {
+  .hero .main__text-container a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero .main__image-container img, .hero .main__image-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-container {
+  margin: 4rem auto 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+body {
+    font-family: $ff-body;
+    font-weight: $fw-body-reg;
+    color: white;
+}
+
+.hero {
+    .main {
+        &__text-container {
+            h1 {
+                font-family: $ff-heading;
+                font-weight: $fw-heading-sb;
+                font-size: 2.5rem;
+
+                @media (max-width: $bp-1) {
+                    font-size: 2.3rem;
+                }
+
+                @media (max-width: $bp-3) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                line-height: 50px;
+                color: $Violet;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}

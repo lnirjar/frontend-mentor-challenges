@@ -1,0 +1,61 @@
+.hero {
+    background: url('../../images/bg-desktop.svg'), $Violet;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: $bp-2 - 1) {
+        background: url('../../images/bg-mobile.svg'), $Violet;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .header {
+        .logo {
+            max-width: 50%;
+        }
+    }
+
+    .main {
+        &__text-container {
+            a {
+                display: block;
+                background-color: white;
+                width: 200px;
+                height: 50px;
+                border-radius: 50px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 250ms ease;
+
+                &:hover, &:focus {
+                    background-color: $Soft-Magenta;
+                    box-shadow: 0px 8px 15px rgba($Soft-Magenta, 0.2);
+                    outline: none;
+                }
+            }
+        }
+
+        &__image-container {
+            #small-card {
+                animation: bob 2s infinite;
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bob {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translateY(-0.5rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
