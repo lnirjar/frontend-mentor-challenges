@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // outline: 1px solid white;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fafafa;
+}
+
+.skipnav {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 0.5rem;
+
+    &:focus {
+        outline: 0.5rem dashed black;
+    }
+}

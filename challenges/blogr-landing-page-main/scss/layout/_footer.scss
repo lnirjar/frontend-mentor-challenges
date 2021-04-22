@@ -1,0 +1,98 @@
+@use '../abstracts/' as *;
+
+footer {
+    background-color: $Very-dark-black-blue;
+    border-top-right-radius: $border-rad;
+
+    *:focus-visible {
+        outline: 1px dashed $White;
+        outline-offset: 0.1rem;
+    }
+
+    *:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+footer .navbar {
+    @extend %container;
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media (max-width: 660px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    h3 {
+        font-family: $ff-ub;
+        font-weight: $fw-ub-med;
+        color: $White;
+    }
+
+    a {
+        text-decoration: none;
+        color: $White;
+        font-weight: $fw-ub-reg;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex: 0 1 85%;
+        justify-content: space-around;
+
+        @media (max-width: 660px) {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        > li {
+
+            > a {
+                font-weight: $fw-op-sb;
+            }
+        }
+    }
+
+    .sub-menu {
+        margin-top: 1.3rem;
+
+        @media (max-width: 660px) {
+            margin-bottom: 2.5rem;
+        }
+
+        a {
+            color: $Grayish-blue;
+            line-height: 2rem;
+        }
+    }
+}
+
+footer .attribution {
+    background-color: #101014;
+    padding: 2rem;
+    color: $Grayish-blue;
+    text-align: center;
+    line-height: 1.3rem;
+    font-weight: $fw-op-light;
+
+    a {
+        color: $Grayish-blue;
+        text-decoration: none;
+
+        &:hover {
+            color: $White;
+        }
+    }
+}

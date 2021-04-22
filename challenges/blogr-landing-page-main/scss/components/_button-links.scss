@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+
+.btn, .auth-links-list a.btn {
+    text-decoration: none;
+    color: $White;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    height: 3rem;
+    border-radius: 3rem;
+    font-weight: $fw-ub-bold;
+    border: 2px solid $White;
+
+    &:hover {
+        background-color: white;
+        color: $Light-red;
+    }
+
+    &:focus-visible {
+        outline-offset: 0.5rem;
+        outline: 5px solid white;
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    &--primary {
+        background-color: white;
+        color: $Light-red;
+
+        &:hover {
+            background-color: $Very-light-red;
+            color: $White;
+            text-decoration: none;
+            border-color: $Very-light-red;
+        }
+    }
+}
+
+.auth-links-list a.login {
+    border: none;
+
+    @media(max-width: 900px) {
+        color: $Very-dark-blue;
+    }
+}

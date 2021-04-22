@@ -1,0 +1,211 @@
+@use '../abstracts' as *;
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 100%;
+
+    @media(max-width: 900px) {
+        display: none;
+        text-align: center;
+        position: absolute;
+        top: 8rem;
+        right: 4rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: $smooth-bs;
+        width: 327px;
+
+        &[aria-hidden="false"] {
+            display: block;
+        }
+    }
+
+    @media(max-width: 600px) {
+        width: calc(100% - 3rem);
+        right: 1.5rem;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    a, button {
+        text-decoration: none;
+        color: $White;
+        align-self: center;
+        font-weight: $fw-ub-bold;
+        font-size: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: $fw-ub-bold;
+        }
+
+        &:focus-visible {
+            outline-offset: 0.5rem;
+            outline: 5px solid currentColor;
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    & > ul {
+        @extend %btn-container;
+    }
+
+    .auth-links-list {
+        width: 13rem;
+
+        @media(max-width: 900px) {
+            display: block;
+            padding-top: 1rem;
+            border-top: 1px solid $Grayish-blue;
+            width: 100%;
+
+            .btn--primary {
+                margin: 1rem auto;
+                color: white;
+                background: linear-gradient(90deg, #ff8f70, #ff3d54);
+                border: none;
+            }
+        }
+    }
+}
+
+header .navbar > .menu {
+    width: 20rem;
+    margin-left: 4rem;
+
+    @media(max-width: 900px) {
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    & > li {
+        position: relative;
+    }
+
+    & > li > button {
+        display: flex;
+        align-items: center;
+        transition: all 250ms ease;
+        background-color: transparent;
+        border: none;
+
+        &:focus-visible {
+            outline: 5px solid currentColor;
+            outline-offset: 0.5rem;
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        &[aria-expanded="true"] {
+            text-decoration: underline;
+
+            @media(max-width: 900px) {
+                color: #6d7e8d;
+                text-decoration: none;
+            }
+
+            &::after {
+                transform: rotateZ(180deg) translateY(-20%);
+            }
+        }
+
+        @media(max-width: 900px) {
+            text-align: center;
+            margin: 0 auto 2rem auto;
+            color: $Very-dark-grayish-blue;
+        }
+
+        &::after {
+            content: url('../images/icon-arrow-light.svg');
+            display: block;
+            margin-left: 0.5rem;
+            transition: all 250ms ease;
+
+            @media(max-width: 900px) {
+                content: url('../images/icon-arrow-dark.svg');
+            }
+        }
+    }
+}
+
+header .sub-menu {
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    text-align: left;
+    padding: 1.5rem;
+    line-height: 2rem;
+    width: 10rem;
+    border-radius: 0.3rem;
+    box-shadow: $smooth-bs;
+    left: -1.5rem;
+    animation: fadeIn 250ms ease;
+
+    @media(max-width: 900px) {
+        position: static;
+        box-shadow: none;
+        animation: opacityZeroToOne 250ms ease;
+        margin-bottom: 1.5rem;
+        width: 100%;
+
+        li {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    @media(max-width: 900px) {
+        background-color: #efeff1;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1.6rem;
+        // background-color: hsl(195, 53%, 79%, 0.5);
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    a {
+        color: $Very-dark-blue;
+        font-weight: $fw-ub-med;
+
+        @media (max-width: 900px) {
+            font-weight: $fw-ub-bold;
+            color: #6d7e8d;
+        }
+
+        &:hover {
+            text-decoration: none;
+            font-weight: $fw-ub-bold;
+        }
+    }
+}

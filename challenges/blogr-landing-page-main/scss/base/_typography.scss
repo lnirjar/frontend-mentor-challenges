@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+:root {
+    font-size: $fs-body;
+}
+
+body {
+    font-family: $ff-op;
+    font-weight: $fw-op-sb;
+}
+
+a, button {
+    font-family: $ff-ub;
+    font-weight: $fw-ub-med;
+}
+
+h2, h3, h4, h5 {
+    color: $Very-dark-blue;
+}
